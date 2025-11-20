@@ -1,9 +1,11 @@
 # Fafu-Agriculture-and-Forestry-Artificial-Intelligence-Research-institute
 基于Ubuntu22.04 ros2 humble版本的2d雷达车，具备自主避障导航功能。
+按照下方使用说明中流程可正常使用本项目代码
 
 ## 使用说明
 
 本说明介绍如何使用本项目中的启动雷达建图、导航的功能
+需注意雷达和驱动文件的参数是否与正在使用型号是否相同
 ### 1. 构建与环境设置
 
 首次或更新源码后进行编译，并在当前终端加载环境：
@@ -67,7 +69,7 @@ ros2 run nav2_map_server map_saver_cli -f /home/jetson/1_ws/src/turn_on_dlrobot_
 test_map_210是地图文件的名称，可自命名。
 ---
 <img width="903" height="330" alt="image" src="https://github.com/user-attachments/assets/35016f19-f6b3-494b-b159-e2fe333c721f" />
-<img width="1221" height="636" alt="image" src="https://github.com/user-attachments/assets/929e5e65-5983-4e93-bf68-0de6c48c0619" />
+<img width="1221" height="636" alt="image" src="https://github.com/user-attachments/assets/76a6516f-f111-40ea-bb1d-8e79fdd534f4" />
 
 
 ### 4. 开始导航
@@ -76,10 +78,11 @@ test_map_210是地图文件的名称，可自命名。
 ros2 launch turn_on_dlrobot_robot navigation_demo.launch.py map:=//home/jetson/1_ws/src/turn_on_dlrobot_robot/maps/newest1_map_214.yaml
 ```
 # map:=这后面跟的是你保存的地图文件中里yaml文件的绝对路径
-<img width="1742" height="1005" alt="image" src="https://github.com/user-attachments/assets/db216123-7dd4-4f1a-908c-6a092931f9bc" />
+<img width="1446" height="975" alt="image" src="https://github.com/user-attachments/assets/997a63b6-1fce-4785-a4ff-d703cc897cb9" />
+
 
 点击上面的2D Pose Estimate进行定位
-<img width="1446" height="975" alt="image" src="https://github.com/user-attachments/assets/6443cdd9-0429-44a4-a820-15bd1cc84874" />
+<img width="1742" height="1005" alt="image" src="https://github.com/user-attachments/assets/f6abca01-63f1-4785-bc24-4e18494212e2" />
 
 定位完成之后，用Nv2 Goal在地图上来选定你要导航到的目标位置
 
